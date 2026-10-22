@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.log
+tools/npm/
+tools/python-packages/
+*.local
+public/assets/work-library/**/videos/*.mp4
+public/assets/compressed-test.mp4

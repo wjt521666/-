@@ -1,0 +1,90 @@
+王江涛作品详情页素材替换说明
+
+这个文件夹用于放第二页/作品详情页的素材。
+
+一共有 8 个分类，每个分类下面都有两个文件夹：
+- covers：放封面图片
+- videos：放作品视频
+
+建议命名方式：
+- 第 1 个作品：covers/01.jpg，videos/01.mp4
+- 第 2 个作品：covers/02.jpg，videos/02.mp4
+- 第 3 个作品：covers/03.jpg，videos/03.mp4
+- 依此类推，到 08
+
+现在代码已经写好自动读取规则：
+- 只要把封面放进对应分类的 covers 文件夹，并命名为 01.jpg 到 08.jpg，网页会自动读取
+- 只要把视频放进对应分类的 videos 文件夹，并命名为 01.mp4 到 08.mp4，网页会自动读取
+- 如果某个封面或视频暂时没放，网页会先使用现有占位图，不会影响页面显示
+- 作品标题、说明、年份、时长仍然在 src/main.jsx 的 detailWorks 里修改
+
+分类对应关系：
+
+1. 3D渲染
+   文件夹：3d-render
+   网页：#/work/3d-render
+   视频路径示例：/assets/work-library/3d-render/videos/01.mp4
+   封面路径示例：/assets/work-library/3d-render/covers/01.jpg
+
+2. 后期合成
+   文件夹：compositing
+   网页：#/work/compositing
+   视频路径示例：/assets/work-library/compositing/videos/01.mp4
+   封面路径示例：/assets/work-library/compositing/covers/01.jpg
+
+3. AR虚拟发布会
+   文件夹：ar-virtual-event
+   网页：#/work/ar-virtual-event
+   视频路径示例：/assets/work-library/ar-virtual-event/videos/01.mp4
+   封面路径示例：/assets/work-library/ar-virtual-event/covers/01.jpg
+
+4. AI赋能
+   文件夹：ai-powered
+   网页：#/work/ai-powered
+   视频路径示例：/assets/work-library/ai-powered/videos/01.mp4
+   封面路径示例：/assets/work-library/ai-powered/covers/01.jpg
+
+5. 产品渲染
+   文件夹：product-render
+   网页：#/work/product-render
+   视频路径示例：/assets/work-library/product-render/videos/01.mp4
+   封面路径示例：/assets/work-library/product-render/covers/01.jpg
+
+6. UE Render
+   文件夹：ue-render
+   网页：#/work/ue-render
+   视频路径示例：/assets/work-library/ue-render/videos/01.mp4
+   封面路径示例：/assets/work-library/ue-render/covers/01.jpg
+
+7. AI小程序
+   文件夹：ai-mini-app
+   网页：#/work/ai-mini-app
+   视频路径示例：/assets/work-library/ai-mini-app/videos/01.mp4
+   封面路径示例：/assets/work-library/ai-mini-app/covers/01.jpg
+
+8. 个人练习
+   文件夹：personal-study
+   网页：#/work/personal-study
+   视频路径示例：/assets/work-library/personal-study/videos/01.mp4
+   封面路径示例：/assets/work-library/personal-study/covers/01.jpg
+
+代码修改位置：
+C:/Users/Administrator/Documents/个人站/src/main.jsx
+
+找到 detailWorks 这一段，里面每个卡片可以改这些字段：
+- title：作品标题
+- subtitle：作品短说明
+- year：年份
+- duration：视频时长
+- cover：封面路径
+- video：视频路径
+- note：补充说明
+- label：角标，例如 Featured / New，也可以留空
+
+示例：
+cover: "/assets/work-library/3d-render/covers/01.jpg",
+video: "/assets/work-library/3d-render/videos/01.mp4",
+title: "HYPTEC S600 DIR",
+subtitle: "产品展示 / 三维动画 / 一镜到底",
+year: "2026",
+duration: "01:08",
